@@ -1,1 +1,481 @@
-sddd
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Orange Enzyme Exfoliating Gel | GMEELAN Official Store</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #fffef8;
+      color: #2d2a24;
+      scroll-behavior: smooth;
+    }
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    /* header */
+    .header {
+      background: rgba(255, 253, 245, 0.96);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid rgba(249, 115, 22, 0.25);
+      padding: 12px 0;
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .logo-img {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+      border-radius: 30px;
+      background: white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    .store-name {
+      font-weight: 800;
+      font-size: 1.35rem;
+      background: linear-gradient(135deg, #e85d04, #f48c06);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .cta-top {
+      background: #ff6b2b;
+      padding: 10px 28px;
+      border-radius: 40px;
+      color: white;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 6px 14px rgba(255,107,43,0.3);
+      transition: 0.2s;
+    }
+    .btn-primary {
+      background: linear-gradient(105deg, #f97316, #ff914d);
+      border: none;
+      padding: 16px 36px;
+      border-radius: 60px;
+      font-weight: 800;
+      font-size: 1.1rem;
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 12px 25px rgba(249,115,22,0.3);
+      transition: 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 20px 30px rgba(249,115,22,0.4); }
+    /* urgency bar */
+    .urgency-bar {
+      background: #fff2e6;
+      border-radius: 80px;
+      padding: 12px 24px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      margin: 30px 0 20px;
+      gap: 15px;
+      border: 1px solid #ffddb0;
+    }
+    .counter-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 600;
+      background: white;
+      padding: 6px 20px;
+      border-radius: 60px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    }
+    .counter-number { font-size: 1.6rem; font-weight: 800; color: #f97316; line-height: 1; }
+    .timer-box {
+      background: #2c2c2c;
+      color: white;
+      padding: 6px 20px;
+      border-radius: 60px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+    }
+    .timer-digits { font-family: monospace; font-size: 1.4rem; letter-spacing: 2px; }
+    /* premium price banner */
+    .price-premium {
+      background: linear-gradient(145deg, #ffffff, #fff7ed);
+      border-radius: 48px;
+      padding: 28px 32px;
+      margin: 30px 0;
+      box-shadow: 0 25px 40px -12px rgba(0,0,0,0.2), 0 0 0 1px rgba(255, 165, 0, 0.2);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .price-premium::before {
+      content: "✨ HOT DEAL ✨";
+      position: absolute;
+      top: 12px;
+      right: 20px;
+      background: #f97316;
+      color: white;
+      font-size: 0.7rem;
+      padding: 4px 14px;
+      border-radius: 30px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+    .price-title {
+      font-size: 1.9rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #c2410c, #f97316);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 16px;
+    }
+    .price-strike-row {
+      font-size: 1.2rem;
+      color: #7c6b5a;
+      text-decoration: line-through;
+      margin-right: 15px;
+    }
+    .price-current {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #e35112;
+      letter-spacing: -0.5px;
+    }
+    .price-badge {
+      background: #ffedd5;
+      padding: 8px 20px;
+      border-radius: 40px;
+      display: inline-block;
+      margin: 10px 5px;
+    }
+    .coupon-gold {
+      background: #2c2a28;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 28px;
+      border-radius: 60px;
+      font-weight: 700;
+      color: #fbbf24;
+      font-size: 1.1rem;
+      margin: 15px 0 5px;
+    }
+    .gift-badge {
+      background: #fef3c7;
+      border-radius: 30px;
+      padding: 10px 20px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    /* product gallery */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 18px;
+      margin: 30px 0;
+    }
+    .gallery-item {
+      border-radius: 24px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: all 0.2s;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.05);
+      background: #fef5e8;
+    }
+    .gallery-item img { width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block; }
+    .gallery-item:hover { transform: scale(1.02); box-shadow: 0 12px 22px rgba(0,0,0,0.12); }
+    /* modal */
+    .modal-lightbox {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      visibility: hidden;
+      opacity: 0;
+      transition: 0.2s;
+    }
+    .modal-lightbox.active { visibility: visible; opacity: 1; }
+    .modal-content { max-width: 90vw; max-height: 90vh; position: relative; }
+    .modal-content img { max-width: 100%; max-height: 90vh; border-radius: 20px; }
+    .close-modal {
+      position: absolute;
+      top: -45px; right: 0;
+      background: white;
+      width: 38px; height: 38px;
+      border-radius: 50%;
+      font-size: 24px;
+      cursor: pointer;
+      border: none;
+    }
+    /* testimoni */
+    .testi-card {
+      background: white;
+      border-radius: 32px;
+      padding: 24px;
+      box-shadow: 0 12px 20px rgba(0,0,0,0.05);
+      border: 1px solid #ffe1b9;
+    }
+    /* fake order */
+    .fake-popup-container {
+      position: fixed;
+      bottom: 24px;
+      right: 20px;
+      z-index: 999;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      pointer-events: none;
+    }
+    .fake-order {
+      background: white;
+      border-radius: 60px;
+      padding: 10px 18px 10px 12px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 270px;
+      pointer-events: auto;
+      border-left: 6px solid #f97316;
+      animation: fadeInUp 0.3s ease;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    .fake-avatar {
+      width: 46px; height: 46px;
+      background: #ffdec2;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1rem;
+      color: #b45309;
+    }
+    .fake-info { flex: 1; font-size: 0.8rem; }
+    .fake-close { background: none; border: none; font-size: 16px; cursor: pointer; color: #aaa; }
+    @media (max-width: 640px) {
+      .fake-order { min-width: 240px; }
+      .price-current { font-size: 1.8rem; }
+    }
+    .feature-icon {
+      background: #fff1e2;
+      border-radius: 60px;
+      padding: 8px 22px;
+      font-weight: 600;
+    }
+    footer { background: #1e1b17; color: #ccc; text-align: center; padding: 32px 20px; margin-top: 60px; }
+    .section-title { font-size: 1.9rem; margin: 45px 0 20px; font-weight: 700; }
+  </style>
+</head>
+<body>
+<header class="header">
+  <div class="container header-inner">
+    <div class="logo-area">
+      <img class="logo-img" src="https://down-tx-id.img.susercontent.com/id-11134216-7r98x-lq0fijp42i9y6b_tn.webp" alt="GMEELAN Store">
+      <span class="store-name">GMEELAN Official Store</span>
+    </div>
+    <a href="#order-section" class="cta-top"><i class="fas fa-bolt"></i> Beli Sekarang</a>
+  </div>
+</header>
+
+<main class="container">
+  <!-- Hero image -->
+  <div style="margin: 30px 0 20px; border-radius: 40px; overflow: hidden;">
+    <img src="https://iownstores.com/cdn/shop/files/1_8c06d115-84d7-47a4-a2dc-b5ba2b53129a.jpg?v=1773781679&width=1200" style="width:100%; border-radius: 32px;" alt="Orange Enzyme Exfoliating Gel">
+  </div>
+
+  <h1 style="font-size: 2rem; text-align: center; font-weight: 800; background: linear-gradient(135deg, #e85d04, #f48c06); -webkit-background-clip: text; background-clip: text; color: transparent;">🍊 Eksfoliasi Lembut, Kulit Glowing Instan</h1>
+  <p style="text-align: center; font-size: 1.1rem; margin: 8px 0 16px;">Tanpa Butiran Kasar • Enzim Jeruk Alami • BPOM Resmi</p>
+
+  <!-- Urgency -->
+  <div class="urgency-bar">
+    <div class="counter-item"><i class="fas fa-eye"></i> <span class="counter-number" id="viewerCount">0</span> <span>melihat</span></div>
+    <div class="counter-item"><i class="fas fa-boxes"></i> <span class="counter-number" id="stockCount">0</span> <span>Stok Tersisa</span></div>
+    <div class="timer-box"><i class="fas fa-hourglass-half"></i> <span id="timerDisplay" class="timer-digits">00:00:00</span> <span>Promo Flash</span></div>
+  </div>
+
+  <!-- problem solusi -->
+  <div style="background: #fff8f0; border-radius: 48px; padding: 32px 24px; margin: 30px 0; display: flex; flex-wrap: wrap; gap: 30px;">
+    <div style="flex:1"><h3><i class="fas fa-ban" style="color:#f97316"></i> Masalah: Kulit Kusam & Iritasi</h3><p>Eksfoliasi fisik dengan butiran kasar merusak skin barrier, menyebabkan kemerahan dan komedo.</p><h3 style="margin-top: 20px;"><i class="fas fa-check-circle" style="color:#2e7d32"></i> Solusi: Enzyme Gel Technology</h3><p>Enzim buah jeruk + PHA mengangkat sel kulit mati secara lembut, kulit langsung halus dan glowing tanpa iritasi.</p></div>
+    <div style="flex:1"><img src="https://iownstores.com/cdn/shop/files/3_241907ca-0796-485c-80e3-81ddeed16d48.jpg?v=1773781880&width=600" style="border-radius: 32px; width:100%;" alt="benefit"></div>
+  </div>
+
+  <!-- Fitur Utama -->
+  <h2 class="section-title"><i class="fas fa-star"></i> Fitur Unggulan</h2>
+  <div style="display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-bottom: 30px;">
+    <span class="feature-icon">🍊 Enzim Jeruk Alami</span> <span class="feature-icon">💧 Hidrasi & PHA</span> <span class="feature-icon">✨ Tanpa Butiran Kasar</span> <span class="feature-icon">🧴 Dermatest Approved</span> <span class="feature-icon">🌿 Hypoallergenic</span>
+  </div>
+  <div style="text-align: center; margin: 20px 0;"><img src="https://iownstores.com/cdn/shop/files/5_a94e547a-0c5d-4741-aeb4-0291ad171da2.jpg?v=1773782169&width=600" style="max-width:100%; border-radius: 32px;"></div>
+
+  <!-- Before After -->
+  <h2 class="section-title">🔄 Real Results: Sebelum & Sesudah</h2>
+  <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+    <img src="https://iownstores.com/cdn/shop/files/2_63e0779e-0f29-407f-a563-86823b454c84.webp?v=1773781679&width=600" style="max-width:280px; border-radius: 28px;">
+    <img src="https://iownstores.com/cdn/shop/files/10.webp?v=1773778335&width=750" style="max-width:280px; border-radius: 28px;">
+  </div>
+
+  <!-- Cara Pakai -->
+  <h2 class="section-title">📖 Cara Penggunaan</h2>
+  <div style="display: flex; gap: 25px; flex-wrap: wrap; justify-content: center; margin-bottom: 20px;">
+    <img src="https://iownstores.com/cdn/shop/files/4_5b99cbca-bc0e-4030-8f57-d08021116960.webp?v=1773781880&width=600" style="max-width:260px; border-radius: 28px;">
+    <img src="https://iownstores.com/cdn/shop/files/7_044163ed-87df-4add-a42a-8734035ea2b8.webp?v=1773782343&width=750" style="max-width:260px; border-radius: 28px;">
+  </div>
+
+  <!-- Galeri Produk -->
+  <h2 class="section-title">📸 Galeri Produk</h2>
+  <div class="gallery-grid" id="galleryGrid"></div>
+
+  <!-- Testimoni (4) dengan profesi -->
+  <h2 class="section-title">💬 Testimoni Real Customer</h2>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: 25px; margin: 20px 0;">
+    <div class="testi-card"><div><i class="fas fa-user-circle"></i> <strong>Jesica Maharani</strong> - Mahasiswi</div><p>⭐⭐⭐⭐⭐ "Setelah 2 minggu, kulit glowing natural, komedo berkurang drastis! Wangi jeruknya segar banget."</p></div>
+    <div class="testi-card"><div><i class="fas fa-user-circle"></i> <strong>Dina Safitri</strong> - Content Creator</div><p>⭐⭐⭐⭐⭐ "Eksfoliasi tanpa perih, bekas jerawat memudat. Wajib repurchase!"</p></div>
+    <div class="testi-card"><div><i class="fas fa-user-circle"></i> <strong>Rizky Amalia</strong> - Ibu Rumah Tangga</div><p>⭐⭐⭐⭐⭐ "Kulit kusam setelah melahirkan cerah merata. Suami bilang kinclong 😍"</p></div>
+    <div class="testi-card"><div><i class="fas fa-user-circle"></i> <strong>Keisha Aurel</strong> - Desainer Grafis</div><p>⭐⭐⭐⭐⭐ "No more dry patches! Lembut, affordable, dan hasilnya nyata."</p></div>
+  </div>
+
+  <!-- Authority + BPOM + Gift -->
+  <div style="background: #f7efe6; border-radius: 48px; padding: 28px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px; margin: 30px 0;">
+    <div><i class="fas fa-certificate" style="font-size: 2rem; color:#f97316;"></i> <strong>BPOM NA11250200408 / NA18250200388 / NA11240200327</strong><br>Terdaftar resmi & Halal</div>
+    <div class="gift-badge"><i class="fas fa-gift fa-2x" style="color:#e85d04;"></i> <strong>🎁 BONUS EKSKLUSIF</strong><br> Sampel masker + sikat eksfoliasi (pembelian 2pcs)</div>
+  </div>
+
+  <!-- PREMIUM HARGA BANNER (diperbaiki) -->
+  <div class="price-premium">
+    <div class="price-title">✨ LIMITED OFFER ✨</div>
+    <div><span class="price-strike-row">Harga Normal Rp 214.500</span> <span class="price-current">Rp 143.000</span> <span class="price-badge">1 PCS</span></div>
+    <div style="margin-top: 12px;"><span class="price-strike-row">Normal Rp 282.000</span> <span class="price-current">Rp 188.000</span> <span class="price-badge">2 PCS + GRATIS ONGKIR</span></div>
+    <div class="coupon-gold"><i class="fas fa-ticket-alt"></i> Kode Kupon: GRATISONGKIR2026 <i class="fas fa-copy" style="cursor:pointer" onclick="copyCoupon()"></i></div>
+    <small style="display: block; margin-top: 12px;">*Khusus pembayaran TF hari ini gratis ongkir s/d 30rb + bonus gift</small>
+  </div>
+
+  <!-- Embed Form OrderOnline -->
+  <div id="order-section" style="scroll-margin-top: 80px; background: #fffaf2; border-radius: 48px; padding: 28px; margin: 30px 0;">
+    <h3 style="text-align: center; margin-bottom: 20px;">📦 PESAN SEKARANG</h3>
+    <div class="ooef"> <form class="orderonline-embed-form" data-username="vera" data-product-slug="orange-enzyme-exfoliating-gel" data-product-id="6a30deccaeffaa41800372ba" id="oo-embed-form-orange-enzyme-exfoliating-gel-1608" data-origin="orderonline"> <div class="ooef-loader"><style>.ooef-loader{visibility: hidden;opacity: 0;position: absolute;left: 0;right: 0;top: 0;bottom: 0;display: flex;justify-content: center;align-items: center;flex-direction: column;animation: ooLoadingIn 10s ease;-webkit-animation: ooLoadingIn 10s ease;animation-fill-mode: forwards;overflow: hidden}@keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}@-webkit-keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}.ooef-loader>div,.ooef-loader>div:after{border-radius: 50%;width: 2.5rem;height: 2.5rem}.ooef-loader>div{font-size: 10px;position: relative;text-indent: -9999em;border: .25rem solid #f5f5f5;border-left: .25rem solid #55c4cf;-webkit-transform: translateZ(0);-ms-transform: translateZ(0);transform: translateZ(0);-webkit-animation: ooLoading 1.1s infinite linear;animation: ooLoading 1.1s infinite linear}.ooef-loader.error>div{border-left: .25rem solid #ff4500;animation-duration: 5s}@-webkit-keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}@keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}</style><div aria-live="polite" role="status"><div>Loading...</div></div></div> </form> </div> <script> if (typeof xLogError != 'function') { var xLogError = function (error) { var req = new XMLHttpRequest(); var payload = JSON.stringify({ url: document.location.href, line: error.line, stack: error.stack }); var params = 'message=' + encodeURIComponent(error.name) + '&payload=' + encodeURIComponent(payload) + '&type=embed&level=error'; req.open('POST', 'https://api.orderonline.id/log', true); req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded'); req.send(params); }; } try { if (typeof xEmbedScript != 'function') { var xEmbedScript = function () { !function(w, d, e, v, id, t, s) { if (d.getElementById(id)) return; t = d.createElement(e);t.async = !0;t.src = v;t.id = id; s = d.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, document, 'script', 'https://cdn.orderonline.id/js/embed-v2-slim.min.js?v=8.0.2', 'oo-embed-js'); }; } if (typeof xEmbedInit != 'function') { var xEmbedInit = function (w, n) { if (w.ooe) return; n = w.ooe = function() { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments) }; if (!w._ooe) w._ooe = n; n.push = n;n.loaded = !0;n.version = '8.0.2';n.queue = []; }; } xEmbedInit(window); ooe('setup', 'redirect', 'https://vera.orderonline.id'); ooe('init', '5f1a7807a9bf807d6c63d963', '6a30deccaeffaa41800372ba', '6a30deccaeffaa41800372bb', 'oo-embed-form-orange-enzyme-exfoliating-gel-1608', {"mode":"page","action":"Klik untuk pemesanan","title":"Form Pemesanan","triggerPixel":true,"triggerGtm":false}); if (!window.jQuery) { !function(w, d, e, v, id, t, s) { if (d.getElementById(id)) return; t = d.createElement(e);t.async = !0;t.src = v;t.id = id; t.addEventListener('load', xEmbedScript); s = d.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, document, 'script', 'https://cdn.orderonline.id/js/vendor/jquery.min.js', 'oo-embed-jquery'); } else { xEmbedScript(); } } catch (e) { xLogError(e); throw e; } </script>
+    <p style="font-size: 0.8rem; text-align: center; margin-top: 12px;">⚠️ Masukkan kode <strong>GRATISONGKIR2026</strong> di kolom kupon untuk gratis ongkir (min 2pcs).</p>
+  </div>
+
+  <div style="text-align: center; margin: 20px 0 50px;">
+    <a href="#order-section" class="btn-primary"><i class="fas fa-shopping-cart"></i> BELI SEKARANG JUGA - KHUSUS TF HARI INI GRATIS ONGKIR</a>
+  </div>
+</main>
+<footer><p>© 2026 GMEELAN Official Store | Orange Enzyme Exfoliating Gel | BPOM Terdaftar | Hasil setiap individu bisa berbeda</p></footer>
+
+<div id="lightboxModal" class="modal-lightbox"><div class="modal-content"><button class="close-modal">&times;</button><img id="modalImage" src=""></div></div>
+<div id="fakePopupContainer" class="fake-popup-container"></div>
+
+<script>
+  // dynamic viewers & stock
+  let viewers = Math.floor(Math.random() * 180) + 270;
+  let stock = Math.floor(Math.random() * 48) + 42;
+  const viewerEl = document.getElementById('viewerCount');
+  const stockEl = document.getElementById('stockCount');
+  viewerEl.innerText = viewers;
+  stockEl.innerText = stock;
+  setInterval(() => { viewers += Math.floor(Math.random() * 5) + 1; viewerEl.innerText = viewers; }, 13000);
+  setInterval(() => { if(stock > 8) { stock -= Math.floor(Math.random() * 2) + 1; if(stock<5) stock=5; stockEl.innerText = stock; } }, 19000);
+
+  // Countdown (2 hari)
+  let deadline = new Date(); deadline.setDate(deadline.getDate() + 2); deadline.setHours(23,59,59,999);
+  function updateTimer() {
+    let diff = deadline - new Date();
+    if(diff <= 0) { document.getElementById('timerDisplay').innerText = "00:00:00"; return; }
+    let h = Math.floor(diff / 3600000);
+    let m = Math.floor((diff % 3600000) / 60000);
+    let s = Math.floor((diff % 60000) / 1000);
+    document.getElementById('timerDisplay').innerText = `${h.toString().padStart(2,'0')}:${m.toString().padStart(2,'0')}:${s.toString().padStart(2,'0')}`;
+  }
+  setInterval(updateTimer, 1000); updateTimer();
+
+  // gallery
+  const galleryImgs = [
+    "https://iownstores.com/cdn/shop/files/1_8c06d115-84d7-47a4-a2dc-b5ba2b53129a.jpg?v=1773781679",
+    "https://iownstores.com/cdn/shop/files/3_241907ca-0796-485c-80e3-81ddeed16d48.jpg?v=1773781880",
+    "https://iownstores.com/cdn/shop/files/6_941afc50-5fc8-4f46-8476-c008fa9368e0.jpg?v=1773782343",
+    "https://iownstores.com/cdn/shop/files/5_a94e547a-0c5d-4741-aeb4-0291ad171da2.jpg?v=1773782169",
+    "https://iownstores.com/cdn/shop/files/2_63e0779e-0f29-407f-a563-86823b454c84.webp?v=1773781679",
+    "https://iownstores.com/cdn/shop/files/10.webp?v=1773778335",
+    "https://iownstores.com/cdn/shop/files/4_5b99cbca-bc0e-4030-8f57-d08021116960.webp?v=1773781880",
+    "https://iownstores.com/cdn/shop/files/7_044163ed-87df-4add-a42a-8734035ea2b8.webp?v=1773782343",
+    "https://cdn.orderonline.id/uploads/images_2114841781588549575.png"
+  ];
+  const grid = document.getElementById('galleryGrid');
+  galleryImgs.forEach(src => {
+    let div = document.createElement('div'); div.className = 'gallery-item';
+    let img = document.createElement('img'); img.src = src; img.loading = 'lazy';
+    div.appendChild(img);
+    div.addEventListener('click', () => { document.getElementById('modalImage').src = src; document.getElementById('lightboxModal').classList.add('active'); });
+    grid.appendChild(div);
+  });
+  document.querySelector('.close-modal').addEventListener('click', () => document.getElementById('lightboxModal').classList.remove('active'));
+  document.getElementById('lightboxModal').addEventListener('click', (e) => { if(e.target === document.getElementById('lightboxModal')) document.getElementById('lightboxModal').classList.remove('active'); });
+
+  // FAKE ORDER NATURAL (random delay 7-14 detik, nama diverse + ibu milenial)
+  const namePool = [
+    "Queenza Maharani", "Gendis Pramudita", "Nayyara Khairunnisa", "Azzahra Larasati", 
+    "Sri Mulyani", "Dewi Sartika", "Rina Hasanah", "Lestari Widodo", "Mega Puspita", 
+    "Tuti Alawiyah", "Yuni Shara", "Indah Pratiwi", "Nia Ramadhani", "Winda Kusuma"
+  ];
+  const regions = ["Bandung", "Surabaya", "Medan", "Makassar", "Palembang", "Semarang", "Yogyakarta", "Malang", "Denpasar", "Balikpapan", "Bogor", "Depok"];
+  function getInitials(n) { return n.split(' ').map(p=>p[0]).join('').substring(0,2).toUpperCase(); }
+  function createFake() {
+    const name = namePool[Math.floor(Math.random() * namePool.length)];
+    const region = regions[Math.floor(Math.random() * regions.length)];
+    const initials = getInitials(name);
+    const container = document.getElementById('fakePopupContainer');
+    const notif = document.createElement('div');
+    notif.className = 'fake-order';
+    notif.innerHTML = `<div class="fake-avatar">${initials}</div><div class="fake-info"><strong>${name}</strong><br>📍 ${region} • <i class="fas fa-shopping-bag"></i> baru saja membeli Orange Enzyme Gel</div><button class="fake-close"><i class="fas fa-times"></i></button>`;
+    const closeBtn = notif.querySelector('.fake-close');
+    closeBtn.addEventListener('click', () => notif.remove());
+    let startY = 0;
+    notif.addEventListener('touchstart', (e) => { startY = e.touches[0].clientY; });
+    notif.addEventListener('touchmove', (e) => { if(e.touches[0].clientY - startY < -40) notif.remove(); });
+    container.appendChild(notif);
+    setTimeout(() => { if(notif.parentNode) notif.remove(); }, 7000);
+  }
+  function scheduleFake() {
+    let delay = Math.floor(Math.random() * 8000) + 7000; // 7-15 detik random
+    setTimeout(() => { createFake(); scheduleFake(); }, delay);
+  }
+  scheduleFake();
+  setTimeout(() => createFake(), 4000);
+  
+  function copyCoupon() {
+    navigator.clipboard.writeText("GRATISONGKIR2026");
+    alert("✅ Kode promo GRATISONGKIR2026 disalin! Masukkan di form pemesanan.");
+  }
+</script>
+</body>
+</html>
